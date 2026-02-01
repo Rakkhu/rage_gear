@@ -1,0 +1,15 @@
+{
+  "name": "rage-road-mode",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "cd client && vite --host",
+    "dev:server": "cd server && node index.js",
+    "build": "cd client && vite build",
+    "postinstall": "cd client && npm install && cd ../server && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

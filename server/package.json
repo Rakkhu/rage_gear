@@ -1,0 +1,12 @@
+{
+    "name": "rage-road-server",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "ws": "^8.16.0",
+        "cannon-es": "^0.20.0"
+    }
+}

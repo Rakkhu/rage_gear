@@ -1,5 +1,5 @@
 
-import { SeededRNG } from '../utils.js';
+import { SeededRNG } from '../../utils.js';
 
 export class ArenaGenerator {
     constructor(seed) {

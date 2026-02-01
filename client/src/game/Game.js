@@ -97,8 +97,9 @@ export class Game {
             // Local movement hack for offline test
             const v = this.vehicles.get('local');
             if (v) {
-                v.mesh.position.z += inp.y * 0.5;
-                v.mesh.rotation.y -= inp.x * 0.05;
+                v.mesh.position.z -= inp.y * 1.0;  // Forward/backward (inverted for camera)
+                v.mesh.position.x += inp.x * 1.0;  // Strafe left/right
+                v.mesh.rotation.y -= inp.x * 0.08; // Turn
                 v.targetPos.copy(v.mesh.position);
                 v.targetQuat.copy(v.mesh.quaternion);
 

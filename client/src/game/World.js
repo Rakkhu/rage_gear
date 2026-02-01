@@ -42,6 +42,10 @@ export class World {
         plane.receiveShadow = true;
         this.scene.add(plane);
 
+        // Arena Group for procedural obstacles
+        this.arenaGroup = new THREE.Group();
+        this.scene.add(this.arenaGroup);
+
         // Resize
         window.addEventListener('resize', () => {
             this.camera.aspect = window.innerWidth / window.innerHeight;

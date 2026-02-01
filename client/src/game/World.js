@@ -72,7 +72,7 @@ export class World {
             this.arenaGroup.remove(this.arenaGroup.children[0]);
         }
 
-        import('./ArenaGenerator.js').then(module => {
+        import('./world/ArenaGenerator.js').then(module => {
             const gen = new module.ArenaGenerator(seed);
             const data = gen.generate();
 
